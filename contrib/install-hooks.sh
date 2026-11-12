@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install git pre-commit hooks for the activelook_flutter project.
+# Install git pre-commit hooks for the activelook_app project.
 #
 # Usage: contrib/install-hooks.sh
 #   or:  bash contrib/install-hooks.sh   # from anywhere in the repo

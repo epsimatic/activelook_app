@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:activelook_flutter/ble/mock_glasses.dart';
-import 'package:activelook_flutter/features/compass/compass_source.dart';
-import 'package:activelook_flutter/features/glasses/glasses_controller.dart';
-import 'package:activelook_flutter/models/compass.dart';
-import 'package:activelook_flutter/models/discovered_glasses.dart';
-import 'package:activelook_flutter/protocol/active_look_compass.dart';
-import 'package:activelook_flutter/protocol/active_look_protocol.dart';
+import 'package:activelook_app/ble/mock_glasses.dart';
+import 'package:activelook_app/features/compass/compass_source.dart';
+import 'package:activelook_app/features/glasses/glasses_controller.dart';
+import 'package:activelook_app/models/compass.dart';
+import 'package:activelook_app/models/discovered_glasses.dart';
+import 'package:activelook_app/protocol/active_look_compass.dart';
+import 'package:activelook_app/protocol/active_look_protocol.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

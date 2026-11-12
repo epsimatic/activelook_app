@@ -1,5 +1,5 @@
-import 'package:activelook_flutter/protocol/active_look_advertisement.dart';
-import 'package:activelook_flutter/protocol/active_look_protocol.dart';
+import 'package:activelook_app/protocol/active_look_advertisement.dart';
+import 'package:activelook_app/protocol/active_look_protocol.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

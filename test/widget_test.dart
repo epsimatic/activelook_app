@@ -1,5 +1,5 @@
-import 'package:activelook_flutter/ble/mock_glasses.dart';
-import 'package:activelook_flutter/features/scan/scan_screen.dart';
+import 'package:activelook_app/ble/mock_glasses.dart';
+import 'package:activelook_app/features/scan/scan_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

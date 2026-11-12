@@ -43,7 +43,7 @@ Built and tested against **engo3** — the color variant (`ALKxx-MDP08…`, 81 r
 
 ### Скачайте сборку под Android:
 
-Щёлкните [Actions](https://github.com/epsimatic/activelook_flutter/actions) вверху страницы, щёлкните по первовому пункту с зелёной галочкой и загрузите .apk файл в конце страницы. Файла там может не быть, тогда попросите [epsimatic](https://github.com/epsimatic) настроить сборку релизов
+Щёлкните [Actions](https://github.com/epsimatic/activelook_app/actions) вверху страницы, щёлкните по первовому пункту с зелёной галочкой и загрузите .apk файл в конце страницы. Файла там может не быть, тогда попросите [epsimatic](https://github.com/epsimatic) настроить сборку релизов
 
 ### Собрать самому под любую ОС:
 

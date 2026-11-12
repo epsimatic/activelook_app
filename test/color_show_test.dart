@@ -1,5 +1,5 @@
-import 'package:activelook_flutter/models/color_show.dart';
-import 'package:activelook_flutter/protocol/active_look_protocol.dart';
+import 'package:activelook_app/models/color_show.dart';
+import 'package:activelook_app/protocol/active_look_protocol.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

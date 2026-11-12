@@ -1,7 +1,7 @@
-import 'package:activelook_flutter/ble/mock_glasses.dart';
-import 'package:activelook_flutter/features/glasses/glasses_controller.dart';
-import 'package:activelook_flutter/models/color_show.dart';
-import 'package:activelook_flutter/models/discovered_glasses.dart';
+import 'package:activelook_app/ble/mock_glasses.dart';
+import 'package:activelook_app/features/glasses/glasses_controller.dart';
+import 'package:activelook_app/models/color_show.dart';
+import 'package:activelook_app/models/discovered_glasses.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

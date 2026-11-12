@@ -1,5 +1,5 @@
 #!/bin/bash
-# Pre-commit hook for the activelook_flutter project
+# Pre-commit hook for the activelook_app project
 # Runs formatting, analysis, automated fix checks, and unit tests before allowing commit.
 #
 # Install: contrib/install-hooks.sh

@@ -1,4 +1,4 @@
-import 'package:activelook_flutter/models/transliteration.dart';
+import 'package:activelook_app/models/transliteration.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
