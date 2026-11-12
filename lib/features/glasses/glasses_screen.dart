@@ -22,7 +22,7 @@ class GlassesScreen extends StatefulWidget {
 
 class _GlassesScreenState extends State<GlassesScreen> {
   final TextEditingController _textController = TextEditingController(
-    text: 'Привет',
+    text: 'Hello!',
   );
 
   /// Briefly highlights the preview when tapped, before opening full screen.

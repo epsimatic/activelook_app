@@ -1,7 +1,7 @@
 # ActiveLook demo app
 
 A Flutter demo for **ActiveLook®** (MICROOLED "Light AR") glasses. It scans for a pair of
-glasses over Bluetooth Low Energy, connects, and displays **"Hi"** on the head-up display.
+glasses over Bluetooth Low Energy, connects, and displays **"Hello!"** on the head-up display.
 
 Built and tested against **engo3** — the color variant (`ALKxx-MDP08…`, 81 red/green colors,
 304×256). On older 16-grey-level glasses (`MDP05`) the same code falls back to `txt`/`grayscale`.
@@ -83,6 +83,9 @@ lib/
 ```
 
 See `AGENTS.md` for the protocol cheat-sheet and project conventions.
+
+Launcher icons (Android legacy + adaptive/themed, macOS) are generated from the SVGs in
+`contrib/icons/`; after editing them run `contrib/make-icons.sh` (needs `magick`).
 
 ## Reference
 
