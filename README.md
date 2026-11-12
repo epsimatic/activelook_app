@@ -33,21 +33,18 @@ Built and tested against **engo3** — the color variant (`ALKxx-MDP08…`, 81 r
   display, and shows the raw protocol frames in a log.
 - Includes a **simulated** link so you can run and demo the UI without any hardware.
 
+## Платформы
+
+- Android 8+
+- macOS (целевая платформа разработки)
+- Должно работать на iOS, Linux и Windows
+
 ## Running it
 
-```bash
-flutter pub get
-flutter run -d macos            # fastest loop; needs a macOS with Bluetooth enabled
-flutter run -d <android-device> # real BLE on a phone
-```
-
-Android needs Bluetooth permissions (already declared in `AndroidManifest.xml`); macOS needs the
-`NSBluetoothAlwaysUsageDescription` key and the `com.apple.security.device.bluetooth`
-entitlement (already configured).
+Prerequisites, SDK setup and the dev environment are described in [`INSTALL.md`](INSTALL.md).
 
 No glasses at hand? Tap **Run the demo without glasses** on the scan screen.
 
-Prerequisites, SDK setup and the dev environment are described in [`INSTALL.md`](INSTALL.md).
 Before committing, install the pre-commit hook (format, analyze and test):
 
 ```bash
