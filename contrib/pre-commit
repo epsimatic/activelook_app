@@ -1,0 +1,68 @@
+#!/bin/bash
+# Pre-commit hook for the activelook_flutter project
+# Runs formatting, analysis, automated fix checks, and unit tests before allowing commit.
+#
+# Install: contrib/install-hooks.sh
+# Skip:    git commit --no-verify
+
+# Find repo root reliably (works from GUI apps, IDEs, etc.)
+PROJECT_DIR="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [ -z "$PROJECT_DIR" ]; then
+  echo "Error: Could not determine project directory."
+  exit 1
+fi
+
+# Ensure flutter/dart is on PATH (GUI apps often have minimal PATH)
+export PATH="/opt/flutter/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:$PATH"
+
+echo "=== Pre-commit checks ==="
+
+FAILED=0
+
+run_check() {
+  local label="$1"
+  shift
+  echo "--- $label ---"
+  if "$@" > /dev/null 2>&1; then
+    echo "  OK"
+  else
+    echo "  FAILED"
+    "$@" 2>&1 | tail -20
+    FAILED=1
+  fi
+}
+
+# Ensure dependencies are up to date (needed for --no-pub)
+run_check "Get dependencies" flutter pub get
+
+# Check formatting
+run_check "Check formatting" dart format --output=none --set-exit-if-changed .
+
+# Check for available automated fixes (dart fix --dry-run exits 0 even with fixes)
+echo "--- Check for available dart fixes ---"
+FIX_OUTPUT=$(cd "$PROJECT_DIR" && dart fix --dry-run 2>&1)
+if echo "$FIX_OUTPUT" | grep -q "Nothing to fix"; then
+  echo "  OK"
+else
+  echo "  FAILED"
+  echo "$FIX_OUTPUT" | tail -20
+  echo "  Run 'dart fix --apply' to apply available fixes."
+  FAILED=1
+fi
+
+# Static analysis
+run_check "Flutter analyze" flutter analyze --no-pub --no-fatal-infos --fatal-warnings
+
+# Unit tests
+run_check "Flutter test" flutter test
+
+if [ $FAILED -ne 0 ]; then
+  echo ""
+  echo "=== Pre-commit checks FAILED ==="
+  echo "Fix the issues above or use --no-verify to skip."
+  exit 1
+fi
+
+echo ""
+echo "=== All pre-commit checks passed ==="
+exit 0
