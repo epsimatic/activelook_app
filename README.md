@@ -1,5 +1,7 @@
 # ActiveLook demo app
 
+![](contrib/icons/app_icon.svg)
+
 A Flutter demo for **ActiveLook®** (MICROOLED "Light AR") glasses. It scans for a pair of
 glasses over Bluetooth Low Energy, connects, and displays **"Hello!"** on the head-up display.
 
